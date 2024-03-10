@@ -4,11 +4,19 @@ return {
       {
         name = "@vue/typescript-plugin",
         location = ".nvm/versions/node/v20.9.0/lib/node_modules/@vue/typescript-plugin",
-        languages = { "javascript", "typescript", "vue" },
+        languages = {
+          "javascript",
+          "typescript",
+          "vue"
+        },
       },
     },
   },
   filetypes = {
-    "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
   },
 }
