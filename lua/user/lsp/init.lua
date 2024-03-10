@@ -88,11 +88,6 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", gopls_opts, opts)
   end
 
-  if server == "tsserver" then
-    local tsserver_opts = require "user.lsp.settings.tsserver"
-    opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
-  end
-
   if server == "volar" then
     local volar_opts = require "user.lsp.settings.volar"
     opts = vim.tbl_deep_extend("force", volar_opts, opts)
