@@ -35,6 +35,9 @@ keymap("n", "<leader>q", ":bdelete<CR>")
 -- Copy buffer path`
 keymap("n", "<leader>c", ":let @+=expand('%:p')<CR>")
 
+-- Better Replace All
+keymap("n", "<leader>ra", ":%s///g<Left><Left>")
+
 --Visual --
 -- Better paste
 keymap("v", "p", "_dP")
@@ -57,6 +60,3 @@ keymap("n", "<leader>tt", "<cmd>NvimTreeToggle<CR>")
 keymap("n", "<leader>tf", "<cmd>NvimTreeFocus<CR>")
 keymap("n", "<leader>ts", "<cmd>NvimTreeFindFile<CR>")
 keymap("n", "<leader>tc", "<cmd>NvimTreeCollapse<CR>")
-
--- Helpers
-keymap("n", "<leader>gd", ":lua _COPY_CURRENT_PATH()<CR>")

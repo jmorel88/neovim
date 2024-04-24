@@ -19,4 +19,5 @@ require "user.whichkey"
 require "user.copilot"
 require "user.colorizer"
 require "user.diffview"
+require "user.surround"
 --[[ require "user.lualine" ]]

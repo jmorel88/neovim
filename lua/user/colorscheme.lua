@@ -11,4 +11,4 @@ material.setup({
 })
 
 vim.g.material_style = "deep ocean"
-vim.cmd "colorscheme tokyonight-moon"
+vim.cmd "colorscheme tokyonight-night"

@@ -48,7 +48,14 @@ return require('packer').startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"      -- lsp autocomplete
 
   -- Snippets
-  use "L3MON4D3/LuaSnip"
+  use({
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!:).
+    run = "make install_jsregexp"
+  })
+
   use "rafamadriz/friendly-snippets"
 
   -- Telescope
@@ -78,7 +85,7 @@ return require('packer').startup(function(use)
   use "nvim-tree/nvim-tree.lua"
 
   -- Tabline
-  use "akinsho/bufferline.nvim"
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
   -- Null LS (prettier, eslint, etc)
   use({ "jose-elias-alvarez/null-ls.nvim" })
@@ -102,5 +109,8 @@ return require('packer').startup(function(use)
   use "norcalli/nvim-colorizer.lua"
 
   -- Statusline
-  use 'nvim-lualine/lualine.nvim'
+  use "nvim-lualine/lualine.nvim"
+
+  -- Surround selections
+  use "kylechui/nvim-surround"
 end)
