@@ -58,6 +58,7 @@ local servers = {
   "lua_ls",
   "astro",
   "unocss",
+  "tailwindcss",
 }
 
 opts = {}
@@ -96,6 +97,11 @@ for _, server in pairs(servers) do
   if server == "vuels" then
     local vuels_opts = require "user.lsp.settings.vuels"
     opts = vim.tbl_deep_extend("force", vuels_opts, opts)
+  end
+
+  if server == "tailwindcss" then
+    local tailwindcss_opts = require "user.lsp.settings.tailwindcss"
+    opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
   end
 
   lspconfig[server].setup(opts)
