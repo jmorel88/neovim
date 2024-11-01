@@ -44,7 +44,7 @@ local lsp_flags = {
 }
 
 local servers = {
-  "tsserver",
+  "ts_ls",
   "cssls",
   "cssmodules_ls",
   "html",
