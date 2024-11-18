@@ -49,14 +49,3 @@ keymap("v", "<", "<gv")
 -- Insert --
 -- Escape insert mode
 keymap("i", "jj", "<ESC>")
-
--- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
-keymap("n", "<leader>fw", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
-keymap("n", "<leader>ftw", ":lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>")
-
--- Nvim Tree
-keymap("n", "<leader>tt", "<cmd>NvimTreeToggle<CR>")
-keymap("n", "<leader>tf", "<cmd>NvimTreeFocus<CR>")
-keymap("n", "<leader>ts", "<cmd>NvimTreeFindFile<CR>")
-keymap("n", "<leader>tc", "<cmd>NvimTreeCollapse<CR>")
