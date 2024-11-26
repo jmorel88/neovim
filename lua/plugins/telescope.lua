@@ -3,13 +3,14 @@ return {
   tag = "0.1.8",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    { "nvim-telescope/telescope-fzf-native.nvim",      build = "make" },
-    { "nvim-telescope/telescope-live-grep-args.nvim",  version = "^1.0.0" },
+    { "nvim-telescope/telescope-fzf-native.nvim",     build = "make" },
+    { "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0" },
   },
   keys = function()
     local telescope = require "telescope"
     local builtin = require "telescope.builtin"
     return {
+      { "<leader>fb", builtin.buffers,                                    { desc = "Telescope find buffers" } },
       { "<leader>ff", builtin.find_files,                                 { desc = "Telescope find files" } },
       { "<leader>fw", telescope.extensions.live_grep_args.live_grep_args, { desc = "Telescope find word" } },
     }

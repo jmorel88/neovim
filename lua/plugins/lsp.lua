@@ -84,7 +84,9 @@ return {
       "ts_ls",
       "lua_ls",
       "volar",
-      "eslint"
+      "eslint",
+      "astro",
+      "gopls",
     }
 
     opts = {}
@@ -108,7 +110,12 @@ return {
 
       if server == "eslint" then
         local eslint_opts = require "lsp.eslint"
-        opts = vim .tbl_deep_extend("force", eslint_opts, opts)
+        opts = vim.tbl_deep_extend("force", eslint_opts, opts)
+      end
+
+      if server == "gopls" then
+        local gopls_opts = require "lsp.gopls"
+        opts = vim.tbl_deep_extend("force", gopls_opts, opts)
       end
 
       lspconfig[server].setup(opts)
