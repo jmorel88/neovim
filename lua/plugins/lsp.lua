@@ -87,6 +87,8 @@ return {
       "eslint",
       "astro",
       "gopls",
+      "glsl_analyzer",
+      "jsonls",
     }
 
     opts = {}
